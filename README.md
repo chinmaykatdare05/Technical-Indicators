@@ -61,10 +61,9 @@ $$
 ## Bollinger Bands %B
 
 %B measures a security's position relative to the bands. It quantifies a security's price relative to the upper and lower bands.
-
-$$
-%B = \frac{(Close - \text{Lower Band})}{(\text{Upper Band} - \text{Lower Band})}
-$$
+```math
+\%B = \frac{(Close - \text{Lower Band})}{(\text{Upper Band} - \text{Lower Band})}
+```
 
 ## Bollinger Bands Width
 
@@ -361,10 +360,9 @@ $$
 ## Stochastic Oscillator
 
 The Stochastic Oscillator measures the relative position of a security's closing price within its price range over a specified period. It helps identify overbought and oversold conditions and potential trend reversals.
-
-$$
+```math
 \%K = \left( \frac{(Current Close - Lowest Low)}{(Highest High - Lowest Low)} \right) \times 100
-$$
+```
 
 $$
 \%D = \text{SMA}(\%K, m)
@@ -389,7 +387,6 @@ $$
 ## Williams %R
 
 The Williams %R indicator measures overbought and oversold levels in a security. It ranges from 0 to -100, with values above -20 indicating overbought conditions and values below -80 indicating oversold conditions.
-
-$$
-\%R = \left( \frac{(Highest High - Close)}{(Highest High - Lowest Low)} \right) \times -100
-$$
+```math
+\%R = \left( \frac{{\text{{Highest High}} - \text{{Close}}}}{{\text{{Highest High}} - \text{{Lowest Low}}}} \right) \times -100
+```
