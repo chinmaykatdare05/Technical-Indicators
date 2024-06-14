@@ -89,6 +89,14 @@ The Chaikin Oscillator is the difference between the 3-day and 10-day exponentia
 \text{Chaikin Oscillator} = \text{EMA}(ADL, 3) - \text{EMA}(ADL, 10)
 ```
 
+## Chande Momentum Oscillator
+
+The Chande Momentum Oscillator (CMO) measures the momentum of a financial instrument. It is similar to the Relative Strength Index (RSI), but it considers both upward and downward price movements.
+
+```math
+\text{CMO} = 100 \times \frac{\sum(\text{Gains}) - \sum(\text{Losses})}{\sum(\text{Gains}) + \sum(\text{Losses})}
+```
+
 ## Commodity Channel Index
 
 The Commodity Channel Index (CCI) measures a security's deviation from its statistical average. It indicates overbought and oversold conditions and potential trend reversals.
