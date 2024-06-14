@@ -1,4 +1,4 @@
-# Mastering Technical Indicators: Formulas, Insights, and Applications
+# Technical Indicators: Formulas, Insights, and Applications
 
 ---
 
