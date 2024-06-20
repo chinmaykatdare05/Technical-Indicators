@@ -9,4 +9,4 @@ def ratiocator(df, column='Close', window=14):
     
     return rat
 
-# df['RAT'] = ratiocator(df, column='Close', window=14)
+# df['RAT'] = ratiocator(df)
