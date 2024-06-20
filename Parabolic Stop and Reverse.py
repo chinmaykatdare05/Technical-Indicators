@@ -1,6 +1,6 @@
 import pandas as pd
 
-def calculate_psar(high, low, close, initial_af=0.02, max_af=0.2, increment=0.02):
+def psar(high, low, close, initial_af=0.02, max_af=0.2, increment=0.02):
     length = len(close)
     psar = close.copy()
     bull = True
@@ -37,4 +37,4 @@ def calculate_psar(high, low, close, initial_af=0.02, max_af=0.2, increment=0.02
 
     return psar
 
-print(calculate_psar(data['high'], data['low'], data['close']))
+print(psar(data['high'], data['low'], data['close']))
