@@ -11,4 +11,4 @@ def trix(df, window=14):
 
     return trix
 
-# df['TRIX'] = trix(df, window=14)
+# df['TRIX'] = trix(df)
