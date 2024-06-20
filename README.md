@@ -56,17 +56,9 @@ Bollinger Bands use a middle band (SMA) and two outer bands to identify price vo
 \text{Lower Band} = \text{SMA}(Close, n) - (k \times \text{StdDev}(Close, n))
 ```
 
-## Bollinger Bands %B
-
-%B indicates a security's price relative to the Bollinger Bands.
-
 ```math
 \%B = \frac{(Close - \text{Lower Band})}{(\text{Upper Band} - \text{Lower Band})}
 ```
-
-## Bollinger Bands Width (BBW)
-
-BBW measures the width of the Bollinger Bands relative to the middle band.
 
 ```math
 BBW = \frac{(\text{Upper Band} - \text{Lower Band})}{\text{SMA}(Close, n)}
