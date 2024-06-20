@@ -12,4 +12,4 @@ def rma(df, column='Close', alpha=0.2):
     
     return rma_values
 
-# df['RMA'] = rma(df, column='Close', alpha=0.2)
+# df['RMA'] = rma(df, alpha=0.2)
