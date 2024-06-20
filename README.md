@@ -286,8 +286,6 @@ ROC = \left( \frac{(Close - \text{Close n periods ago})}{\text{Close n periods a
 
 ## Relative Strength Index (RSI)
 
-
-
 RSI identifies overbought or oversold conditions.
 
 ```math
@@ -306,28 +304,12 @@ RVI measures price momentum.
 RVI = \frac{\text{Close} - \text{Open}}{\text{High} - \text{Low}}
 ```
 
-## Running Moving Average (RMA)
-
-RMA updates with new data for trend identification.
-
-```math
-RMA = \frac{(\text{Previous RMA} \times (n - 1)) + Close}{n}
-```
-
 ## Simple Moving Average (SMA)
 
 SMA averages closing prices.
 
 ```math
 SMA = \frac{\text{Sum of Close Prices for } n \text{ periods}}{n}
-```
-
-## Smoothed Moving Average (SMMA)
-
-SMMA smooths data for trend clarity.
-
-```math
-SMMA = \frac{\text{Sum of Close Prices for } n \text{ periods}}{n}
 ```
 
 ## Stochastic Oscillator
