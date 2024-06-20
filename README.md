@@ -240,22 +240,6 @@ Pivot Points determine support and resistance levels based on the previous day's
 \text{Support and Resistance Levels} = \{ \text{R1, R2, R3, S1, S2, S3} \}
 ```
 
-## Price Oscillator (PPO)
-
-PPO identifies trend direction and signals.
-
-```math
-PPO = \left( \frac{(Shorter EMA - Longer EMA)}{Longer EMA} \right) \times 100
-```
-
-## Psychological Line (PSY)
-
-PSY measures market sentiment.
-
-```math
-PSY = \left( \frac{\text{Number of periods closing higher}}{\text{Total number of periods}} \right) \times 100
-```
-
 ## Rate of Change (ROC)
 
 ROC measures percentage price change.
