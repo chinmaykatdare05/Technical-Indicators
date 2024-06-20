@@ -156,26 +156,6 @@ IKH provides support, resistance, trend direction, and momentum signals.
 \text{Senkou Span B} = \frac{(Highest High + Lowest Low)}{2}
 ```
 
-## KDJ
-
-KDJ identifies overbought/oversold conditions and potential reversals.
-
-```math
-RSV = \frac{(Close - Lowest Low)}{(Highest High - Lowest Low)} \times 100
-```
-
-```math
-K = \text{SMA}(RSV, n)
-```
-
-```math
-D = \text{SMA}(K, m)
-```
-
-```math
-J = 3 \times K - 2 \times D
-```
-
 ## Keltner Channels
 
 Keltner Channels use an SMA line and outer bands to identify trend and reversals.
