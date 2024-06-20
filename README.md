@@ -18,6 +18,14 @@ The Accumulation Distribution Line (ADL) is a momentum indicator that relates pr
 ADL = \text{Previous ADL} + \text{Current Money Flow Volume}
 ```
 
+## Average Directional Index (ADX)
+
+The Average Directional Index (ADX) measures the strength of a trend without regard to its direction. It is part of the Directional Movement System developed by J. Welles Wilder.
+
+```math
+\text{ADX} = \text{SMA}(\frac{\text{TR}_n}{\text{DMI}}, n)
+```
+
 ## Aroon
 
 Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. It consists of two lines: Aroon Up and Aroon Down. Aroon Up measures the number of periods since the highest high, while Aroon Down measures the number of periods since the lowest low.
@@ -73,14 +81,6 @@ Chaikin Money Flow (CMF) is an oscillator that measures the accumulation/distrib
 CMF = \frac{((Close - Low) - (High - Close))}{(High - Low)} \times \text{Volume}
 ```
 
-## Chande Momentum Oscillator
-
-The Chande Momentum Oscillator (CMO) measures the momentum of a financial instrument. It is similar to the Relative Strength Index (RSI), but it considers both upward and downward price movements.
-
-```math
-\text{CMO} = 100 \times \frac{\sum(\text{Gains}) - \sum(\text{Losses})}{\sum(\text{Gains}) + \sum(\text{Losses})}
-```
-
 ## Commodity Channel Index
 
 The Commodity Channel Index (CCI) measures a security's deviation from its statistical average. It indicates overbought and oversold conditions and potential trend reversals.
@@ -107,6 +107,14 @@ The Exponential Moving Average (EMA) gives more weight to recent prices, making 
 
 ```math
 EMA = \alpha \times Close + (1 - \alpha) \times \text{Previous EMA}
+```
+
+## Fibonacci Retracement
+
+Fibonacci Retracement is a tool used in technical analysis to identify potential support and resistance levels based on the Fibonacci sequence.
+
+```math
+\text{Fibonacci Retracement Levels} = \text{High} - (\text{High} - \text{Low}) \times \{0, 0.236, 0.382, 0.5, 0.618, 1\}
 ```
 
 ## Heikin-Ashi
@@ -241,6 +249,18 @@ The Parabolic SAR (PSAR) is a trend-following indicator that helps traders ident
 PSAR = \text{Previous PSAR} + AF \times (EP - \text{Previous PSAR})
 ```
 
+## Pivot Points
+
+Pivot Points are used to determine potential support and resistance levels based on the previous day's trading range.
+
+```math
+\text{Pivot Point} = \frac{\text{High} + \text{Low} + \text{Close}}{3}
+```
+
+```math
+\text{Support and Resistance Levels} = \{ \text{R1, R2, R3, S1, S2, S3} \}
+```
+
 ## Price Oscillator (PPO)
 
 The Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage. It helps identify trend direction and potential buy/sell signals.
@@ -275,6 +295,14 @@ RSI = 100 - \left( \frac{100}{(1 + RS)} \right)
 
 ```math
 RS = \text{Average of } x \text{ days' up closes} / \text{Average of } x \text{ days' down closes}
+```
+
+## Relative Vigor Index (RVI)
+
+The Relative Vigor Index (RVI) measures the conviction of a recent price action and the level of conviction behind it.
+
+```math
+RVI = \frac{\text{Close} - \text{Open}}{\text{High} - \text{Low}}
 ```
 
 ## Running Moving Average (RMA)
@@ -312,12 +340,24 @@ The Stochastic Oscillator measures the relative position of a security's closing
 \%D = \text{SMA}(\%K, m)
 ```
 
-## Triple Exponential Moving Average (TRIX)
+## Stochastic RSI (StochRSI)
 
-The Triple Exponential Moving Average (TRIX) is a momentum oscillator that displays the percentage rate of change of a triple-smoothed exponential moving average. It helps identify trend direction and potential reversal points.
+Stochastic RSI (StochRSI) measures the level of RSI relative to its range over a set period.
 
 ```math
-TRIX = \text{EMA}(\text{EMA}(\text{EMA}(Close, n), n), n)
+\%K = \left( \frac{(Current RSI - Lowest RSI)}{(Highest RSI - Lowest RSI)} \right) \times 100
+```
+
+```math
+\%D = \text{SMA}(\%K, m)
+```
+
+## Volume Weighted Average Price (VWAP)
+
+The Volume Weighted Average Price (VWAP) determines the average price a security has traded at throughout the day, based on both volume and price.
+
+```math
+VWAP = \frac{\sum(\text{Price} \times \text{Volume})}{\sum(\text{Volume})}
 ```
 
 ## Williams %R
