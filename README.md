@@ -18,14 +18,6 @@ The Accumulation Distribution Line (ADL) is a momentum indicator that relates pr
 ADL = \text{Previous ADL} + \text{Current Money Flow Volume}
 ```
 
-## Adaptive Moving Average
-
-The Adaptive Moving Average (AMA) is a technical analysis indicator used to filter price fluctuations and determine trend direction. It adjusts its sensitivity based on market volatility. It is calculated by adding a fraction of the difference between the close price and the previous AMA to the previous AMA.
-
-```math
-AMA = \text{Previous AMA} + \alpha \times (Close - \text{Previous AMA})
-```
-
 ## Aroon
 
 Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. It consists of two lines: Aroon Up and Aroon Down. Aroon Up measures the number of periods since the highest high, while Aroon Down measures the number of periods since the lowest low.
@@ -81,14 +73,6 @@ Chaikin Money Flow (CMF) is an oscillator that measures the accumulation/distrib
 CMF = \frac{((Close - Low) - (High - Close))}{(High - Low)} \times \text{Volume}
 ```
 
-## Chaikin Oscillator
-
-The Chaikin Oscillator is the difference between the 3-day and 10-day exponential moving averages of the Accumulation Distribution Line (ADL). It is used to identify possible trend reversals and confirm trends.
-
-```math
-\text{Chaikin Oscillator} = \text{EMA}(ADL, 3) - \text{EMA}(ADL, 10)
-```
-
 ## Chande Momentum Oscillator
 
 The Chande Momentum Oscillator (CMO) measures the momentum of a financial instrument. It is similar to the Relative Strength Index (RSI), but it considers both upward and downward price movements.
@@ -115,18 +99,6 @@ The Directional Movement Indicator (DMI) consists of two lines: +DI and -DI. It 
 
 ```math
 -DI = 100 \times \frac{(Smoothed -DM)}{ATR}
-```
-
-## Envelope (ENV)
-
-Envelopes consist of two SMA lines that form a channel around the price. They help identify overbought and oversold conditions.
-
-```math
-\text{Upper Envelope} = \text{SMA}(Close, n) \times (1 + \frac{\text{Percentage}}{100})
-```
-
-```math
-\text{Lower Envelope} = \text{SMA}(Close, n) \times (1 - \frac{\text{Percentage}}{100})
 ```
 
 ## Exponential Moving Average (EMA)
@@ -213,14 +185,6 @@ Keltner Channels consist of an SMA line and two outer lines that are plotted abo
 \text{Lower Channel} = \text{Middle Line} - (ATR \times \text{ATRMultiplier})
 ```
 
-## Modified (Smoothed) Moving Average
-
-The Modified Moving Average (SMMA) is similar to the Exponential Moving Average (EMA) but with a smoother curve. It helps filter out noise and identify trends more accurately.
-
-```math
-SMMA = \frac{(Previous SMMA \times (n - 1) + Close)}{n}
-```
-
 ## Momentum
 
 Momentum measures the rate of price change and helps identify trend strength. It is calculated as the difference between the current price and the price n periods ago.
@@ -277,18 +241,6 @@ The Parabolic SAR (PSAR) is a trend-following indicator that helps traders ident
 PSAR = \text{Previous PSAR} + AF \times (EP - \text{Previous PSAR})
 ```
 
-## Price Channels
-
-Price Channels are used to identify potential breakout points and trend reversals. They consist of an upper channel line and a lower channel line based on the highest high and lowest low prices over a specified period.
-
-```math
-\text{Upper Channel} = \text{Highest High}(n)
-```
-
-```math
-\text{Lower Channel} = \text{Lowest Low}(n)
-```
-
 ## Price Oscillator (PPO)
 
 The Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage. It helps identify trend direction and potential buy/sell signals.
@@ -305,28 +257,12 @@ The Psychological Line (PSY) measures market sentiment by calculating the percen
 PSY = \left( \frac{\text{Number of periods closing higher}}{\text{Total number of periods}} \right) \times 100
 ```
 
-## Rank Correlation Index (RCI)
-
-The Rank Correlation Index (RCI) measures the correlation between two data series. It helps identify the strength and direction of the relationship between variables.
-
-```math
-RCI = \frac{\sum (\text{rank of } x) \times (\text{rank of } y)}{n(n^2 - 1)}
-```
-
 ## Rate of Change (ROC)
 
 The Rate of Change (ROC) measures the percentage change in price over a specified period. It helps identify momentum and potential trend reversals.
 
 ```math
 ROC = \left( \frac{(Close - \text{Close n periods ago})}{\text{Close n periods ago}} \right) \times 100
-```
-
-## Ratiocator (RAT)
-
-The Ratiocator (RAT) compares the current price to its moving average to identify overbought and oversold conditions. It helps confirm trend direction and potential entry/exit points.
-
-```math
-RAT = \frac{Close}{\text{SMA}(Close, n)}
 ```
 
 ## Relative Strength Index (RSI)
@@ -382,14 +318,6 @@ The Triple Exponential Moving Average (TRIX) is a momentum oscillator that displ
 
 ```math
 TRIX = \text{EMA}(\text{EMA}(\text{EMA}(Close, n), n), n)
-```
-
-## Volume + Moving Average
-
-The Volume + Moving Average (VMA) measures the average volume of a security over a specified period. It helps identify changes in trading activity and potential trend reversals.
-
-```math
-VMA = \text{SMA}(Volume, n)
 ```
 
 ## Williams %R
