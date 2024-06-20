@@ -16,14 +16,6 @@ The Accumulation Distribution Line (ADL) is a momentum indicator that combines p
 ADL = \text{Previous ADL} + \text{Current Money Flow Volume}
 ```
 
-## Average Directional Index (ADX)
-
-The Average Directional Index (ADX) measures the strength of a trend, irrespective of its direction.
-
-```math
-\text{ADX} = \text{SMA}\left(\frac{\text{TR}_n}{\text{DMI}}, n\right)
-```
-
 ## Aroon
 
 Aroon identifies trend strength and direction using two lines: Aroon Up and Aroon Down.
@@ -34,6 +26,14 @@ Aroon identifies trend strength and direction using two lines: Aroon Up and Aroo
 
 ```math
 \text{Aroon Down} = \left( \frac{\text{Period} - \text{Number of Periods Since Lowest Low}}{\text{Period}} \right) \times 100
+```
+
+## Average Directional Index (ADX)
+
+The Average Directional Index (ADX) measures the strength of a trend, irrespective of its direction.
+
+```math
+\text{ADX} = \text{SMA}\left(\frac{\text{TR}_n}{\text{DMI}}, n\right)
 ```
 
 ## Average True Range (ATR)
