@@ -1,7 +1,5 @@
 # Technical Indicators: Formulas, Insights, and Applications
 
----
-
 This guide covers essential technical indicators for financial analysis and trading. It explains their significance, provides formulas, and shows how to use them to analyze price movements, identify trends, and improve trading strategies.
 
 ## Table of Contents
