@@ -1,30 +1,49 @@
 import numpy as np
+from pandas import DataFrame
+from typing import Tuple
 
 
-def aroon(df, window_size):
-    aroon_up = np.zeros(len(df))
-    aroon_down = np.zeros(len(df))
+def aroon(df: DataFrame, window_size: int) -> Tuple[np.ndarray, np.ndarray]:
+    """
+    Calculate the Aroon Up and Aroon Down indicators.
 
-    for i in range(window_size, len(df)):
-        high_window = df["High"][i - window_size : i]
-        low_window = df["Low"][i - window_size : i]
+    Parameters:
+        df (DataFrame): A DataFrame containing 'High' and 'Low' columns.
+        window_size (int): The period over which to calculate the Aroon indicators.
 
-        high_index = high_window.argmax()
-        low_index = low_window.argmin()
+    Returns:
+        Tuple of np.ndarrays: (Aroon Up, Aroon Down)
+    """
+    n = len(df)
+    aroon_up = np.full(n, np.nan)
+    aroon_down = np.full(n, np.nan)
 
-        aroon_up[i] = (window_size - high_index) / window_size * 100
-        aroon_down[i] = (window_size - low_index) / window_size * 100
+    highs = df["High"].to_numpy()
+    lows = df["Low"].to_numpy()
+
+    for i in range(window_size, n):
+        high_window = highs[i - window_size : i]
+        low_window = lows[i - window_size : i]
+
+        days_since_high = window_size - np.argmax(high_window)
+        days_since_low = window_size - np.argmin(low_window)
+
+        aroon_up[i] = (days_since_high / window_size) * 100
+        aroon_down[i] = (days_since_low / window_size) * 100
 
     return aroon_up, aroon_down
 
 
-# df['Aroon Up'], df['Aroon Down'] = aroon(df, window_size = 14)
+def aroon_oscillator(df: DataFrame, window_size: int) -> np.ndarray:
+    """
+    Calculate the Aroon Oscillator.
 
+    Parameters:
+        df (DataFrame): A DataFrame containing 'High' and 'Low' columns.
+        window_size (int): The period over which to calculate the Aroon oscillator.
 
-def aroon_oscillator(df, window_size):
+    Returns:
+        np.ndarray: Aroon Oscillator values.
+    """
     aroon_up, aroon_down = aroon(df, window_size)
-    aroon_oscillator = aroon_up - aroon_down
-    return aroon_oscillator
-
-
-# df['Aroon Oscillator'] = aroon_oscillator(df, window_size = 14)
+    return aroon_up - aroon_down

@@ -1,7 +1,22 @@
+import pandas as pd
 import numpy as np
 
 
-def keltner_channels(df, window_size=20, multiplier=2, ema_window=20):
+def keltner_channels(
+    df: pd.DataFrame, window_size: int = 20, multiplier: float = 2, ema_window: int = 20
+) -> pd.DataFrame:
+    """
+    Calculate the Keltner Channels for the given DataFrame.
+
+    Parameters:
+        df (pd.DataFrame): DataFrame containing 'High', 'Low', and 'Close' columns.
+        window_size (int): The window size for the ATR calculation. Default is 20.
+        multiplier (float): The multiplier for the ATR to calculate the upper and lower bands. Default is 2.
+        ema_window (int): The window size for the EMA of the Typical Price. Default is 20.
+
+    Returns:
+        pd.DataFrame: DataFrame with Keltner Channel components: 'Middle_Line', 'Upper_Band', 'Lower_Band', 'Typical_Price', 'ATR'.
+    """
     # Calculate Typical Price
     df["Typical_Price"] = (df["High"] + df["Low"] + df["Close"]) / 3
 
@@ -26,7 +41,4 @@ def keltner_channels(df, window_size=20, multiplier=2, ema_window=20):
     df["Upper_Band"] = df["Middle_Line"] + multiplier * df["ATR"]
     df["Lower_Band"] = df["Middle_Line"] - multiplier * df["ATR"]
 
-    return df
-
-
-# df = keltner_channels(df)
+    return df[["Typical_Price", "Middle_Line", "Upper_Band", "Lower_Band", "ATR"]]
